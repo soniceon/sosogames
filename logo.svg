@@ -1,0 +1,60 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景橙色圆形 -->
+  <circle cx="100" cy="100" r="75" fill="#F5A623"/>
+  
+  <!-- 背景装饰白线 -->
+  <rect x="40" y="72" width="35" height="5" fill="white" rx="2.5"/>
+  <rect x="40" y="85" width="25" height="5" fill="white" rx="2.5"/>
+  <rect x="40" y="98" width="30" height="5" fill="white" rx="2.5"/>
+  
+  <!-- 手柄顶部连接弧形 -->
+  <path d="M 85 70 Q 92 60 100 60 Q 108 60 115 70" 
+        stroke="#4A4A4A" 
+        stroke-width="6" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- 鼠标线 -->
+  <path d="M 100 60 L 100 45 Q 100 40 105 40 Q 115 40 118 47 Q 122 55 128 57" 
+        stroke="#4A4A4A" 
+        stroke-width="6" 
+        fill="none" 
+        stroke-linecap="round"/>
+  
+  <!-- 游戏手柄主体轮廓 -->
+  <path d="M 65 85 
+           Q 55 80 50 90 
+           Q 45 100 50 110 
+           L 50 125 
+           Q 50 140 60 145 
+           Q 70 150 80 150 
+           L 85 150 
+           Q 90 155 100 155 
+           Q 110 155 115 150 
+           L 120 150 
+           Q 130 150 140 145 
+           Q 150 140 150 125 
+           L 150 110 
+           Q 155 100 150 90 
+           Q 145 80 135 85 
+           L 65 85 Z" 
+        fill="#8CC152" 
+        stroke="#4A4A4A" 
+        stroke-width="5"/>
+  
+  <!-- 左侧按钮 - 十字键 -->
+  <circle cx="75" cy="108" r="12" fill="#8CC152" stroke="#4A4A4A" stroke-width="4"/>
+  
+  <!-- 十字符号 -->
+  <rect x="70" y="105.5" width="10" height="5" fill="#4A4A4A" rx="1"/>
+  <rect x="72.5" y="103" width="5" height="10" fill="#4A4A4A" rx="1"/>
+  
+  <!-- 右侧按钮 - 圆形键 -->
+  <circle cx="125" cy="108" r="12" fill="#8CC152" stroke="#4A4A4A" stroke-width="4"/>
+  
+  <!-- 圆形符号 -->
+  <circle cx="125" cy="108" r="6" fill="none" stroke="#4A4A4A" stroke-width="3"/>
+  
+  <!-- 中间小嘴巴 -->
+  <rect x="92" y="127" width="16" height="4" fill="#4A4A4A" rx="2"/>
+</svg>

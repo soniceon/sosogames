@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash World Games - Play Free Online | SoSo Games</title>
+    <meta name="description" content="Play Geometry Dash World games online for free. Experience the best collection of Geometry Dash World adventures including Toxic Factory series and classic editions.">
+    <meta name="keywords" content="Geometry Dash World, so so games, geometry dash online, free games, platform games">
+    <link rel="canonical" href="https://sosogames.org/geometry-dash-world">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Geometry Dash World Games - Play Free Online">
+    <meta property="og:description" content="Play the best Geometry Dash World games collection online for free">
+    <meta property="og:url" content="https://sosogames.org/geometry-dash-world">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'apple-blue': '#007AFF',
+                        'apple-gray': '#8E8E93',
+                        'apple-light-gray': '#F2F2F7',
+                        'apple-dark': '#1C1C1E',
+                        'apple-green': '#34C759',
+                        'apple-orange': '#FF9500'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .game-iframe {
+            transition: transform 0.3s ease;
+        }
+        .game-iframe:hover {
+            transform: scale(1.02);
+        }
+        .active-game {
+            background: linear-gradient(135deg, #007AFF, #34C759);
+        }
+        
+        #fullscreen-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="bg-apple-light-gray min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-3 text-2xl font-bold text-apple-blue">
+                        <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 背景橙色圆形 -->
+                            <circle cx="100" cy="100" r="75" fill="#F5A623"/>
+                            
+                            <!-- 背景装饰白线 -->
+                            <rect x="40" y="72" width="35" height="5" fill="white" rx="2.5"/>
+                            <rect x="40" y="85" width="25" height="5" fill="white" rx="2.5"/>
+                            <rect x="40" y="98" width="30" height="5" fill="white" rx="2.5"/>
+                            
+                            <!-- 手柄顶部连接弧形 -->
+                            <path d="M 85 70 Q 92 60 100 60 Q 108 60 115 70" 
+                                    stroke="#4A4A4A" 
+                                    stroke-width="6" 
+                                    fill="none" 
+                                    stroke-linecap="round"/>
+                            
+                            <!-- 鼠标线 -->
+                            <path d="M 100 60 L 100 45 Q 100 40 105 40 Q 115 40 118 47 Q 122 55 128 57" 
+                                    stroke="#4A4A4A" 
+                                    stroke-width="6" 
+                                    fill="none" 
+                                    stroke-linecap="round"/>
+                            
+                            <!-- 游戏手柄主体轮廓 -->
+                            <path d="M 65 85 
+                                        Q 55 80 50 90 
+                                        Q 45 100 50 110 
+                                        L 50 125 
+                                        Q 50 140 60 145 
+                                        Q 70 150 80 150 
+                                        L 85 150 
+                                        Q 90 155 100 155 
+                                        Q 110 155 115 150 
+                                        L 120 150 
+                                        Q 130 150 140 145 
+                                        Q 150 140 150 125 
+                                        L 150 110 
+                                        Q 155 100 150 90 
+                                        Q 145 80 135 85 
+                                        L 65 85 Z" 
+                                    fill="#8CC152" 
+                                    stroke="#4A4A4A" 
+                                    stroke-width="5"/>
+                            
+                            <!-- 左侧按钮 - 十字键 -->
+                            <circle cx="75" cy="108" r="12" fill="#8CC152" stroke="#4A4A4A" stroke-width="4"/>
+                            
+                            <!-- 十字符号 -->
+                            <rect x="70" y="105.5" width="10" height="5" fill="#4A4A4A" rx="1"/>
+                            <rect x="72.5" y="103" width="5" height="10" fill="#4A4A4A" rx="1"/>
+                            
+                            <!-- 右侧按钮 - 圆形键 -->
+                            <circle cx="125" cy="108" r="12" fill="#8CC152" stroke="#4A4A4A" stroke-width="4"/>
+                            
+                            <!-- 圆形符号 -->
+                            <circle cx="125" cy="108" r="6" fill="none" stroke="#4A4A4A" stroke-width="3"/>
+                            
+                            <!-- 中间小嘴巴 -->
+                            <rect x="92" y="127" width="16" height="4" fill="#4A4A4A" rx="2"/>
+                        </svg>
+                        <span>SoSo Games</span>
+                    </a>
+                    <span class="ml-2 text-apple-gray">|</span>
+                    <nav class="ml-4">
+                        <a href="/geometry-dash-world" class="text-apple-dark hover:text-apple-blue transition-colors">Geometry Dash World</a>
+                    </nav>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="text-apple-gray text-sm">Free Online Games</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="lg:w-80 bg-white rounded-2xl shadow-sm p-6">
+                <h2 class="text-xl font-semibold text-apple-dark mb-6">Geometry Dash World Collection</h2>
+                <nav class="space-y-3">
+                    <button onclick="showGame('game1')" id="nav-game1" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray active-game text-white">
+                        <div class="font-medium">Geometry Dash World (Peppa Pig)</div>
+                    </button>
+                    <button onclick="showGame('game2')" id="nav-game2" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World Toxic Factory</div>
+                    </button>
+                    <button onclick="showGame('game3')" id="nav-game3" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World</div>
+                    </button>
+                    <button onclick="showGame('game4')" id="nav-game4" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World Toxic Factory Space Pirates</div>
+                    </button>
+                    <button onclick="showGame('game5')" id="nav-game5" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World Dashlands Years</div>
+                    </button>
+                    <button onclick="showGame('game6')" id="nav-game6" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World Dashlands Payload</div>
+                    </button>
+                    <button onclick="showGame('game7')" id="nav-game7" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World remix</div>
+                    </button>
+                    <button onclick="showGame('game8')" id="nav-game8" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World 1</div>
+                    </button>
+                    <button onclick="showGame('game9')" id="nav-game9" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry Dash World Toxic Factory 1</div>
+                    </button>
+                    <button onclick="showGame('game10')" id="nav-game10" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
+                        <div class="font-medium">Geometry dash World Dasher</div>
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1">
+                <div id="game1" class="game-content">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World (Peppa Pig)</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World (Peppa Pig) online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe1" src="https://scratch.mit.edu/projects/421250443/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game2" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Toxic Factory</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Toxic Factory online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe2" src="https://scratch.mit.edu/projects/339167615/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game3" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe3" src="https://scratch.mit.edu/projects/1040950208/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game4" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Toxic Factory Space Pirates</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Toxic Factory Space Pirates online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe4" src="https://scratch.mit.edu/projects/351845584/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game5" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Dashlands Years</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Dashlands Years online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe5" src="https://scratch.mit.edu/projects/351768518/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game6" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Dashlands Payload</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Dashlands Payload online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe6" src="https://scratch.mit.edu/projects/351708778/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game7" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World remix</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World remix online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe7" src="https://scratch.mit.edu/projects/428351260/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game8" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World 1</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World 1 online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe8" src="https://scratch.mit.edu/projects/474070806/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game9" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Toxic Factory 1</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Toxic Factory 1 online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe9" src="https://scratch.mit.edu/projects/224236914/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="game10" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry dash World Dasher</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry dash World Dasher online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg">
+                                    <iframe id="iframe10" src="https://scratch.mit.edu/projects/605770209/embed?ui=false" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-apple-dark mb-4">SoSo Games</h3>
+                    <p class="text-apple-gray">Your destination for free online Geometry Dash World games and more exciting adventures.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-apple-dark mb-4">Popular Games</h3>
+                    <ul class="space-y-2 text-apple-gray">
+                        <li><a href="#" class="hover:text-apple-blue transition-colors">Geometry Dash World</a></li>
+                        <li><a href="#" class="hover:text-apple-blue transition-colors">Toxic Factory Series</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-apple-dark mb-4">About</h3>
+                    <p class="text-apple-gray">Experience the best collection of Geometry Dash World games, all playable directly in your browser.</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-apple-gray">
+                <p>&copy; 2025 SoSo Games. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="fullscreen-modal" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+        <button onclick="closeFullscreenModal()" class="absolute top-4 right-4 text-white text-3xl font-bold">&times;</button>
+        <div id="fullscreen-container" class="w-full h-full p-8">
+            <!-- The game iframe will be moved here -->
+        </div>
+    </div>
+
+    <script>
+        let originalParent = null;
+        let fullscreenedIframe = null;
+
+        function showGame(gameId) {
+            // Hide all games
+            const allGames = document.querySelectorAll('.game-content');
+            allGames.forEach(game => game.classList.add('hidden'));
+            
+            // Show selected game
+            document.getElementById(gameId).classList.remove('hidden');
+            
+            // Update navigation buttons
+            const allNavButtons = document.querySelectorAll('[id^="nav-"]');
+            allNavButtons.forEach(btn => {
+                btn.classList.remove('active-game', 'text-white');
+                btn.classList.add('text-apple-dark');
+            });
+            
+            // Highlight active button
+            const activeBtn = document.getElementById('nav-' + gameId);
+            activeBtn.classList.add('active-game', 'text-white');
+            activeBtn.classList.remove('text-apple-dark');
+            
+            // Update page title and URL
+            const gameTitles = {
+                'game1': 'Geometry Dash World (Peppa Pig)',
+                'game2': 'Geometry Dash World Toxic Factory',
+                'game3': 'Geometry Dash World',
+                'game4': 'Geometry Dash World Toxic Factory Space Pirates',
+                'game5': 'Geometry Dash World Dashlands Years',
+                'game6': 'Geometry Dash World Dashlands Payload',
+                'game7': 'Geometry Dash World remix',
+                'game8': 'Geometry Dash World 1',
+                'game9': 'Geometry Dash World Toxic Factory 1',
+                'game10': 'Geometry dash World Dasher'
+            };
+            
+            document.title = gameTitles[gameId] + ' - Play Free Online | SoSo Games';
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function reloadGame(button) {
+            const gameContent = button.closest('.game-content');
+            const iframe = gameContent.querySelector('iframe');
+            if (iframe) {
+                iframe.src = iframe.src;
+            }
+        }
+
+        function openFullscreen(button) {
+            const gameContent = button.closest('.game-content');
+            const iframe = gameContent.querySelector('iframe');
+            if (iframe) {
+                originalParent = iframe.parentElement;
+                fullscreenedIframe = iframe;
+                
+                const fullscreenContainer = document.getElementById('fullscreen-container');
+                fullscreenContainer.appendChild(iframe);
+                
+                document.getElementById('fullscreen-modal').classList.remove('hidden');
+            }
+        }
+
+        function closeFullscreenModal() {
+            if (fullscreenedIframe && originalParent) {
+                originalParent.appendChild(fullscreenedIframe);
+                
+                document.getElementById('fullscreen-modal').classList.add('hidden');
+                
+                originalParent = null;
+                fullscreenedIframe = null;
+            }
+        }
+
+        // Mobile responsive adjustments
+        function adjustForMobile() {
+            if (window.innerWidth < 768) {
+                const iframes = document.querySelectorAll('iframe');
+                iframes.forEach(iframe => {
+                    iframe.style.width = '100%';
+                    iframe.style.height = '300px';
+                });
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            adjustForMobile();
+            window.addEventListener('resize', adjustForMobile);
+        });
+    </script>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "SoSo Games - Geometry Dash World Collection",
+        "url": "https://sosogames.org",
+        "description": "Play the best collection of Geometry Dash World games online for free",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://sosogames.org/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</body>
+</html>
