@@ -45,4 +45,4 @@ User-agent: Bytespider
 Allow: /
 Crawl-delay: 1
 
-Sitemap: https://sosogames.com/sitemap.xml 
+Sitemap: https://sosogames.org/sitemap.xml 
