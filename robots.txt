@@ -1,48 +1,12 @@
 User-agent: *
 Allow: /
 
-User-agent: Baiduspider
-Allow: /
+# Sitemap
+Sitemap: https://www.sosogames.org/sitemap.xml
+
+# Crawl-delay
 Crawl-delay: 1
 
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: ChatGPT-User
-Allow: /
-Crawl-delay: 1
-
-User-agent: GPTBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: ClaudeBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: PerplexityBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Applebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Amazonbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: CCBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bytespider
-Allow: /
-Crawl-delay: 1
-
-Sitemap: https://sosogames.org/sitemap.xml 
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/ 
