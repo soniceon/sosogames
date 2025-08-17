@@ -21,6 +21,12 @@
     
     <!-- Robots Meta Tag -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="slurp" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="duckduckbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="baiduspider" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="yandexbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Geometry Dash World Games - Play Free Online">
@@ -175,25 +181,75 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col lg:flex-row gap-8">
             <!-- Sidebar Navigation -->
-            <aside class="lg:w-80 bg-white rounded-2xl shadow-sm p-6">
-                <h2 class="text-xl font-semibold text-apple-dark mb-6">Geometry Dash World Collection</h2>
-                <nav class="space-y-3">
-                    <button onclick="showGame('game1')" id="nav-game1" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray active-game text-white">
-                        <div class="font-medium">Geometry Dash World (Peppa Pig)</div>
-                    </button>
-                    <button onclick="showGame('game2')" id="nav-game2" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
-                        <div class="font-medium">Geometry Dash World Toxic Factory</div>
-                    </button>
-                    <button onclick="showGame('game3')" id="nav-game3" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
-                        <div class="font-medium">Geometry Dash World</div>
-                    </button>
-                    <button onclick="showGame('game4')" id="nav-game4" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
-                        <div class="font-medium">Geometry Dash World Toxic Factory Space Pirates</div>
-                    </button>
-                    <button onclick="showGame('game5')" id="nav-game5" class="w-full text-left p-4 rounded-xl transition-all hover:bg-apple-light-gray">
-                        <div class="font-medium">Geometry Dash World Dashlands Years</div>
-                    </button>
-                </nav>
+            <aside class="lg:w-80 bg-gradient-to-b from-white to-gray-50 rounded-2xl shadow-lg border border-gray-100 p-6">
+                <div class="flex items-center mb-6">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-3">
+                        <span class="text-white text-xl">🎮</span>
+                    </div>
+                    <h2 class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Geometry Dash World Collection</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <!-- Game 1: Geometry Dash: Neon World -->
+                    <div onclick="showGame('game1')" id="nav-game1" class="group cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl active-game overflow-hidden border-2 border-blue-500 shadow-lg">
+                        <div class="bg-cover bg-center h-28 relative" style="background-image: url('/images/Geometry-Dash-Neon-World.jpg');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-medium shadow-lg">ACTIVE</div>
+                            <div class="absolute bottom-3 left-3 text-white">
+                                <div class="font-bold text-sm mb-1">Geometry Dash: Neon World</div>
+                                <div class="text-xs opacity-90 flex items-center">
+                                    <span class="mr-2">🌟</span>
+                                    <span>Neon Adventure</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!-- Game 4: Geometry Dash -->
+                    <div onclick="showGame('game4')" id="nav-game4" class="group cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden border border-gray-200 hover:border-red-300 bg-white">
+                        <div class="bg-cover bg-center h-28 relative" style="background-image: url('/images/Geometry-Dash.jpg');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white">
+                                <div class="font-bold text-sm mb-1">Geometry Dash</div>
+                                <div class="text-xs opacity-90 flex items-center">
+                                    <span class="mr-2">⚡</span>
+                                    <span>Original Game</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-red-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!-- Game 6: Geometry Dash Bloodbath -->
+                    <div onclick="showGame('game6')" id="nav-game6" class="group cursor-pointer rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl overflow-hidden border border-gray-200 hover:border-red-600 bg-white">
+                        <div class="bg-cover bg-center h-28 relative" style="background-image: url('/images/Geometry-Dash-Bloodbath.jpg');">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-3 left-3 text-white">
+                                <div class="font-bold text-sm mb-1">Geometry Dash Bloodbath</div>
+                                <div class="text-xs opacity-90 flex items-center">
+                                    <span class="mr-2">💀</span>
+                                    <span>Extreme Challenge</span>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    
+
+                    
+
+                </div>
+                
+                <!-- Footer info -->
+                <div class="mt-6 pt-4 border-t border-gray-200 text-center">
+                    <p class="text-xs text-gray-500">3 Amazing Games</p>
+                    <p class="text-xs text-gray-400 mt-1">Click any game to play!</p>
+                </div>
             </aside>
 
             <!-- Main Content -->
@@ -202,16 +258,16 @@
                     <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                         <div class="p-8">
                             <div class="flex justify-between items-center mb-4">
-                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World (Peppa Pig)</h1>
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash: Neon World</h1>
                                 <div>
                                     <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
                                     <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
                                 </div>
                             </div>
-                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World (Peppa Pig) online for free.</p>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash: Neon World online for free.</p>
                             <div class="game-container mb-8 flex justify-center">
-                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
-                                    <iframe id="iframe1" src="https://scratch.mit.edu/projects/421250443/embed?ui=false" allowtransparency="true" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-7xl">
+                                    <iframe id="iframe1" src="https://www.miniplay.com/embed/geometry-dash-neon-world" style="width:100%;height:700px;" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-8">
@@ -298,16 +354,16 @@
                     <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                         <div class="p-8">
                             <div class="flex justify-between items-center mb-4">
-                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Toxic Factory</h1>
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World</h1>
                                 <div>
                                     <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
                                     <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
                                 </div>
                             </div>
-                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Toxic Factory online for free.</p>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World online for free.</p>
                             <div class="game-container mb-8 flex justify-center">
                                 <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
-                                    <iframe id="iframe2" src="https://scratch.mit.edu/projects/339167615/embed?ui=false" allowtransparency="true" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                    <iframe id="iframe2" src="https://www.miniplay.com/embed/geometry-dash-world" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-8">
@@ -415,7 +471,7 @@
                             <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World online for free.</p>
                             <div class="game-container mb-8 flex justify-center">
                                 <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
-                                    <iframe id="iframe3" src="https://scratch.mit.edu/projects/1040950208/embed?ui=false" allowtransparency="true" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                    <iframe id="iframe3" src="https://www.miniplay.com/embed/geometrical-dash" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-8">
@@ -502,16 +558,16 @@
                     <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                         <div class="p-8">
                             <div class="flex justify-between items-center mb-4">
-                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Toxic Factory Space Pirates</h1>
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash</h1>
                                 <div>
                                     <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
                                     <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
                                 </div>
                             </div>
-                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Toxic Factory Space Pirates online for free.</p>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash online for free.</p>
                             <div class="game-container mb-8 flex justify-center">
                                 <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
-                                    <iframe id="iframe4" src="https://scratch.mit.edu/projects/351845584/embed?ui=false" allowtransparency="true" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                    <iframe id="iframe4" src="https://www.miniplay.com/embed/geometry-dash" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-8">
@@ -528,48 +584,48 @@
 
                             <!-- Game SEO Content -->
                             <div class="mt-8 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl p-6">
-                                <h2 class="text-2xl font-bold text-apple-dark mb-4">🚀 Geometry Dash World Space Pirates - Complete Guide</h2>
+                                <h2 class="text-2xl font-bold text-apple-dark mb-4">⚡ Geometry Dash Original - Complete Game Guide</h2>
                                 <div class="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">🚀 Space Adventure</h3>
-                                        <p class="text-apple-gray mb-4">Geometry Dash World Space Pirates takes players on an interstellar adventure with cosmic obstacles and space-themed challenges. This level combines traditional Geometry Dash mechanics with unique space pirate elements.</p>
+                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">⚡ Original Game Overview</h3>
+                                        <p class="text-apple-gray mb-4">Geometry Dash is the iconic rhythm-based action platformer that started it all. Experience the original gameplay mechanics with the iconic yellow cube character, challenging obstacles, and perfectly synchronized music that made this game a global phenomenon.</p>
                                         <div class="bg-white p-4 rounded-lg">
-                                            <h4 class="font-semibold text-apple-dark mb-2">Space Features:</h4>
+                                            <h4 class="font-semibold text-apple-dark mb-2">Original Features:</h4>
                                             <ul class="text-sm text-apple-gray space-y-1">
-                                                <li>• Cosmic obstacle patterns</li>
-                                                <li>• Space pirate theme</li>
-                                                <li>• Interstellar challenges</li>
-                                                <li>• Zero gravity effects</li>
+                                                <li>• Iconic yellow cube character</li>
+                                                <li>• Perfect rhythm synchronization</li>
+                                                <li>• Classic obstacle patterns</li>
+                                                <li>• Memorable electronic soundtrack</li>
                                             </ul>
                                         </div>
                                         <div class="bg-white p-4 rounded-lg mt-4">
-                                            <h4 class="font-semibold text-apple-dark mb-2">Space Mission Stats:</h4>
+                                            <h4 class="font-semibold text-apple-dark mb-2">Gameplay Analysis:</h4>
                                             <div class="grid grid-cols-2 gap-4 text-sm text-apple-gray">
                                                 <div>
-                                                    <p><strong>Mission Duration:</strong> ~40 seconds</p>
-                                                    <p><strong>Cosmic Hazards:</strong> 30-35</p>
+                                                    <p><strong>Level Length:</strong> ~45 seconds</p>
+                                                    <p><strong>Obstacles:</strong> 35-40</p>
                                                 </div>
                                                 <div>
-                                                    <p><strong>Gravity Effects:</strong> Zero-G</p>
-                                                    <p><strong>Success Rate:</strong> 45%</p>
+                                                    <p><strong>Difficulty:</strong> 4/5 stars</p>
+                                                    <p><strong>Completion Rate:</strong> 25%</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">💡 Space Strategies</h3>
+                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">💡 Master Strategies</h3>
                                         <div class="space-y-3">
                                             <div class="bg-gradient-to-r from-yellow-500 to-orange-600 text-white p-4 rounded-lg">
-                                                <h4 class="font-semibold mb-2">🚀 Cosmic Navigation</h4>
-                                                <p class="text-sm">Learn to navigate through asteroid fields and space debris. Use the space theme elements as visual cues for timing.</p>
+                                                <h4 class="font-semibold mb-2">⚡ Perfect Timing</h4>
+                                                <p class="text-sm">Master the precise timing required for each jump. The original game demands pixel-perfect execution.</p>
                                             </div>
-                                            <div class="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-4 rounded-lg">
-                                                <h4 class="font-semibold mb-2">⭐ Interstellar Timing</h4>
-                                                <p class="text-sm">Master the rhythm of cosmic movement. Focus on the space pirate visual elements for timing cues.</p>
+                                            <div class="bg-gradient-to-r from-red-500 to-pink-600 text-white p-4 rounded-lg">
+                                                <h4 class="font-semibold mb-2">🎵 Music Sync</h4>
+                                                <p class="text-sm">Listen to the beat and time your jumps with the music. The soundtrack is perfectly synchronized with obstacles.</p>
                                             </div>
-                                            <div class="bg-gradient-to-r from-blue-500 to-cyan-600 text-white p-4 rounded-lg">
-                                                <h4 class="font-semibold mb-2">🌌 Zero Gravity Mastery</h4>
-                                                <p class="text-sm">Adapt to zero-gravity mechanics and floating obstacles. Space physics require unique timing approaches.</p>
+                                            <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-lg">
+                                                <h4 class="font-semibold mb-2">🎯 Pattern Recognition</h4>
+                                                <p class="text-sm">Learn to recognize and memorize obstacle patterns. Each section has unique challenges that require practice.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -578,16 +634,16 @@
                                 <!-- Additional Content -->
                                 <div class="mt-6 grid md:grid-cols-3 gap-4">
                                     <div class="bg-white p-4 rounded-lg">
-                                        <h4 class="font-semibold text-apple-dark mb-2">🎵 Cosmic Soundtrack</h4>
-                                        <p class="text-sm text-apple-gray">Space-themed music with cosmic beats and interstellar rhythm patterns.</p>
+                                        <h4 class="font-semibold text-apple-dark mb-2">🎵 Iconic Soundtrack</h4>
+                                        <p class="text-sm text-apple-gray">The legendary electronic music that perfectly syncs with every jump and obstacle.</p>
                                     </div>
                                     <div class="bg-white p-4 rounded-lg">
-                                        <h4 class="font-semibold text-apple-dark mb-2">🌌 Space Graphics</h4>
-                                        <p class="text-sm text-apple-gray">Stunning cosmic visuals with stars, planets, and space pirate elements.</p>
+                                        <h4 class="font-semibold text-apple-dark mb-2">🎨 Classic Design</h4>
+                                        <p class="text-sm text-apple-gray">Timeless geometric graphics with the iconic yellow cube character and vibrant colors.</p>
                                     </div>
                                     <div class="bg-white p-4 rounded-lg">
-                                        <h4 class="font-semibold text-apple-dark mb-2">🚀 Unique Mechanics</h4>
-                                        <p class="text-sm text-apple-gray">Zero-gravity gameplay with floating obstacles and space physics effects.</p>
+                                        <h4 class="font-semibold text-apple-dark mb-2">🏆 Legendary Status</h4>
+                                        <p class="text-sm text-apple-gray">The original game that revolutionized rhythm-based platformers and inspired countless imitators.</p>
                                     </div>
                                 </div>
                             </div>
@@ -598,16 +654,16 @@
                     <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
                         <div class="p-8">
                             <div class="flex justify-between items-center mb-4">
-                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash World Dashlands Years</h1>
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash: Emoji</h1>
                                 <div>
                                     <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
                                     <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
                                 </div>
                             </div>
-                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash World Dashlands Years online for free.</p>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash: Emoji online for free.</p>
                             <div class="game-container mb-8 flex justify-center">
                                 <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
-                                    <iframe id="iframe5" src="https://scratch.mit.edu/projects/351768518/embed?ui=false" allowtransparency="true" width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen allow="fullscreen"></iframe>
+                                    <iframe id="iframe5" src="https://www.miniplay.com/embed/geometry-dash-emoji" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                             <div class="grid md:grid-cols-2 gap-8">
@@ -691,62 +747,378 @@
                     </div>
                 </div>
 
-                <!-- Popular Games Section -->
+                <!-- Game 6: Geometry Dash Bloodbath -->
+                <div id="game6" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash Bloodbath</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash Bloodbath online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe6" src="https://www.miniplay.com/embed/geometry-dash-bloodbath" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Game SEO Content -->
+                            <div class="mt-8 bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6">
+                                <h2 class="text-2xl font-bold text-apple-dark mb-4">💀 Geometry Dash Bloodbath - Ultimate Challenge Guide</h2>
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">💀 Extreme Challenge Overview</h3>
+                                        <p class="text-apple-gray mb-4">Geometry Dash Bloodbath is one of the most challenging and infamous levels in the Geometry Dash community. This demon-rated level features intense obstacle patterns, rapid transitions, and requires absolute mastery of timing and rhythm synchronization.</p>
+                                        <div class="bg-white p-4 rounded-lg">
+                                            <h4 class="font-semibold text-apple-dark mb-2">Bloodbath Features:</h4>
+                                            <ul class="text-sm text-apple-gray space-y-1">
+                                                <li>• Demon difficulty rating (10 stars)</li>
+                                                <li>• Intense obstacle patterns</li>
+                                                <li>• Rapid transitions and speed changes</li>
+                                                <li>• Complex rhythm synchronization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bg-white p-4 rounded-lg mt-4">
+                                            <h4 class="font-semibold text-apple-dark mb-2">Challenge Analysis:</h4>
+                                            <div class="grid grid-cols-2 gap-4 text-sm text-apple-gray">
+                                                <div>
+                                                    <p><strong>Level Length:</strong> ~2 minutes</p>
+                                                    <p><strong>Obstacles:</strong> 200+</p>
+                                                </div>
+                                                <div>
+                                                    <p><strong>Difficulty:</strong> 10/10 stars</p>
+                                                    <p><strong>Completion Rate:</strong> <5%</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-apple-dark mb-3">💡 Survival Strategies</h3>
+                                        <div class="space-y-3">
+                                            <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white p-4 rounded-lg">
+                                                <h4 class="font-semibold mb-2">💀 Mental Preparation</h4>
+                                                <p class="text-sm">This level requires extreme focus and mental stamina. Take breaks between attempts to maintain concentration.</p>
+                                            </div>
+                                            <div class="bg-gradient-to-r from-purple-600 to-red-600 text-white p-4 rounded-lg">
+                                                <h4 class="font-semibold mb-2">⚡ Speed Mastery</h4>
+                                                <p class="text-sm">Master rapid transitions and speed changes. Each section requires different timing approaches.</p>
+                                            </div>
+                                            <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white p-4 rounded-lg">
+                                                <h4 class="font-semibold mb-2">🎵 Rhythm Perfection</h4>
+                                                <p class="text-sm">Perfect rhythm synchronization is crucial. Listen to the music and memorize every beat pattern.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Additional Content -->
+                                <div class="mt-6 grid md:grid-cols-3 gap-4">
+                                    <div class="bg-white p-4 rounded-lg">
+                                        <h4 class="font-semibold text-apple-dark mb-2">🎵 Intense Soundtrack</h4>
+                                        <p class="text-sm text-apple-gray">Fast-paced electronic music with complex rhythms that perfectly sync with the extreme challenges.</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg">
+                                        <h4 class="font-semibold text-apple-dark mb-2">💀 Dark Theme</h4>
+                                        <p class="text-sm text-apple-gray">Menacing red and black color scheme with demonic visual elements that match the extreme difficulty.</p>
+                                    </div>
+                                    <div class="bg-white p-4 rounded-lg">
+                                        <h4 class="font-semibold text-apple-dark mb-2">🏆 Elite Status</h4>
+                                        <p class="text-sm text-apple-gray">Only the most skilled players can complete this legendary level. A true test of Geometry Dash mastery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 7: Geometry Dash Nemesis -->
+                <div id="game7" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash Nemesis</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash Nemesis online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe7" src="https://www.miniplay.com/embed/geometry-dash-nemesis" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 8: Geometry Dash Lite -->
+                <div id="game8" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash Lite</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash Lite online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe8" src="https://www.miniplay.com/embed/geometry-dash-lite" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 9: Geometry Dash but 3D -->
+                <div id="game9" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash but 3D</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash but 3D online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe9" src="https://www.miniplay.com/embed/geometry-dash-but-3d" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 10: Geometry Dash 3D -->
+                <div id="game10" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash 3D</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash 3D online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe10" src="https://www.miniplay.com/embed/geometry-dash-3d" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 11: Geometry Dash Online -->
+                <div id="game11" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash Online</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash Online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe11" src="https://www.miniplay.com/embed/geometry-dash-online" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 12: Geometry Dash Meltdown -->
+                <div id="game12" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash Meltdown</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash Meltdown online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe12" src="https://www.miniplay.com/embed/geometry-dash-meltdown" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game 13: Geometry Dash: 8 Bits -->
+                <div id="game13" class="game-content hidden">
+                    <div class="bg-white rounded-2xl shadow-sm overflow-hidden">
+                        <div class="p-8">
+                            <div class="flex justify-between items-center mb-4">
+                                <h1 class="text-4xl font-bold text-apple-dark">Geometry Dash: 8 Bits</h1>
+                                <div>
+                                    <button onclick="reloadGame(this)" class="bg-apple-orange text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors mr-2">Reload</button>
+                                    <button onclick="openFullscreen(this)" class="bg-apple-blue text-white px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">Fullscreen</button>
+                                </div>
+                            </div>
+                            <p class="text-xl text-apple-gray mb-8">Play Geometry Dash: 8 Bits online for free.</p>
+                            <div class="game-container mb-8 flex justify-center">
+                                <div class="game-iframe bg-black rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+                                    <iframe id="iframe13" src="https://www.miniplay.com/embed/geometry-dash-8-bits" style="width:100%;height:600px;" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h2 class="text-2xl font-semibold text-apple-dark mb-4">How to Play</h2>
+                                    <ul class="space-y-2 text-apple-gray">
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Click or tap to jump</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Avoid all obstacles and spikes</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Time your jumps perfectly</li>
+                                        <li class="flex items-center"><span class="w-2 h-2 bg-apple-blue rounded-full mr-3"></span>Reach the end to complete the level</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Geometry Dash Games Section -->
                 <div class="mt-12 bg-white rounded-2xl shadow-sm p-8">
-                    <h2 class="text-3xl font-bold text-apple-dark mb-8">🔥 Similar Games</h2>
+                    <h2 class="text-3xl font-bold text-apple-dark mb-8">🎮 Playable Geometry Dash Games Collection</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://store.steampowered.com/app/322170/Geometry_Dash/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">🎮</span>
-                                <h3 class="text-xl font-bold">Geometry Dash</h3>
+                        <!-- Game 1: Geometry Dash: Neon World -->
+                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/Geometry-Dash-Neon-World.jpg');" onclick="showGame('game1')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-3xl mr-3">🌟</span>
+                                    <h3 class="text-xl font-bold">Geometry Dash: Neon World</h3>
+                                </div>
+                                <p class="text-pink-100 mb-4">Experience the neon-themed Geometry Dash adventure with vibrant colors and electrifying gameplay.</p>
+                                <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold text-center">Play Now</div>
                             </div>
-                            <p class="text-blue-100 mb-4">The original Geometry Dash game with challenging levels and music synchronization.</p>
-                            <button class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">Play Now</button>
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300" muted loop>
+                                <source src="/vidoes/Geometry-Dash-Neon-World.mp4" type="video/mp4">
+                            </video>
                         </div>
                         
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://store.steampowered.com/app/322170/Geometry_Dash/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">🏃</span>
-                                <h3 class="text-xl font-bold">Geometry Dash Lite</h3>
+                        <!-- Game 4: Geometry Dash -->
+                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/Geometry-Dash.jpg');" onclick="showGame('game4')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-3xl mr-3">⚡</span>
+                                    <h3 class="text-xl font-bold">Geometry Dash</h3>
+                                </div>
+                                <p class="text-red-100 mb-4">The original Geometry Dash with classic gameplay and challenging levels.</p>
+                                <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold text-center">Play Now</div>
                             </div>
-                            <p class="text-green-100 mb-4">Simplified version with easier levels for beginners.</p>
-                            <button class="bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-green-50 transition-colors">Play Now</button>
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300" muted loop>
+                                <source src="/vidoes/Geometry-Dash.mp4" type="video/mp4">
+                            </video>
                         </div>
                         
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://store.steampowered.com/app/322170/Geometry_Dash/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">⚡</span>
-                                <h3 class="text-xl font-bold">Geometry Dash World</h3>
+                        <!-- Game 6: Geometry Dash Bloodbath -->
+                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer relative overflow-hidden" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/images/Geometry-Dash-Bloodbath.jpg');" onclick="showGame('game6')">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-3xl mr-3">💀</span>
+                                    <h3 class="text-xl font-bold">Geometry Dash Bloodbath</h3>
+                                </div>
+                                <p class="text-red-100 mb-4">Extreme difficulty level with intense challenges for expert players.</p>
+                                <div class="bg-white bg-opacity-20 px-4 py-2 rounded-lg font-semibold text-center">Play Now</div>
                             </div>
-                            <p class="text-red-100 mb-4">Mobile version with unique worlds and new mechanics.</p>
-                            <button class="bg-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:bg-red-50 transition-colors">Play Now</button>
-                        </div>
-                        
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://store.steampowered.com/app/322170/Geometry_Dash/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">🎵</span>
-                                <h3 class="text-xl font-bold">Geometry Dash Meltdown</h3>
-                            </div>
-                            <p class="text-yellow-100 mb-4">Special edition with new levels and music tracks.</p>
-                            <button class="bg-white text-yellow-600 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-50 transition-colors">Play Now</button>
-                        </div>
-                        
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://store.steampowered.com/app/322170/Geometry_Dash/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">🎯</span>
-                                <h3 class="text-xl font-bold">Geometry Dash SubZero</h3>
-                            </div>
-                            <p class="text-purple-100 mb-4">Frost-themed edition with ice mechanics and new challenges.</p>
-                            <button class="bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-purple-50 transition-colors">Play Now</button>
-                        </div>
-                        
-                        <div class="bg-cover bg-center rounded-xl p-6 text-white hover:transform hover:scale-105 transition-all duration-300 cursor-pointer" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.akamai.steamstatic.com/steam/apps/322170/header.jpg');" onclick="window.open('https://geometrydashworld.net/', '_blank')">
-                            <div class="flex items-center mb-4">
-                                <span class="text-2xl mr-3">🌍</span>
-                                <h3 class="text-xl font-bold">Geometry Dash World</h3>
-                            </div>
-                            <p class="text-indigo-100 mb-4">Play the official Geometry Dash World online with 10 unique levels.</p>
-                            <button class="bg-white text-indigo-600 px-4 py-2 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Play Now</button>
+                            <video class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300" muted loop>
+                                <source src="/vidoes/Geometry-Dash-Bloodbath.mp4" type="video/mp4">
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -831,16 +1203,16 @@
             
             // Update page title and URL
             const gameTitles = {
-                'game1': 'Geometry Dash World (Peppa Pig)',
-                'game2': 'Geometry Dash World Toxic Factory',
-                'game3': 'Geometry Dash World',
-                'game4': 'Geometry Dash World Toxic Factory Space Pirates',
-                'game5': 'Geometry Dash World Dashlands Years',
-                'game6': 'Geometry Dash World Dashlands Payload',
-                'game7': 'Geometry Dash World remix',
-                'game8': 'Geometry Dash World 1',
-                'game9': 'Geometry Dash World Toxic Factory 1',
-                'game10': 'Geometry dash World Dasher'
+                'game1': 'Geometry Dash: Neon World',
+                'game2': 'Geometry Dash World',
+                'game3': 'Geometrical Dash',
+                'game4': 'Geometry Dash',
+                'game5': 'Geometry Dash: Emoji',
+                'game6': 'Geometry Dash Bloodbath',
+                'game7': 'Geometry Dash Nemesis',
+                'game8': 'Geometry Dash Lite',
+                'game9': 'Geometry Dash but 3D',
+                'game10': 'Geometry Dash 3D'
             };
             
             document.title = gameTitles[gameId] + ' - Play Free Online | SoSo Games';
