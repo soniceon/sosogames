@@ -9,4 +9,18 @@ Crawl-delay: 1
 
 # Disallow specific paths if needed
 # Disallow: /admin/
-# Disallow: /private/ 
+# Disallow: /private/
+
+# Allow important directories
+Allow: /images/
+Allow: /vidoes/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+
+# Block unnecessary files
+Disallow: /*.txt$
+Disallow: /*.log$
+Disallow: /*.tmp$
+Disallow: /*.bak$
+Disallow: /*.old$ 
